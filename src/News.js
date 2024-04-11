@@ -51,6 +51,7 @@ export default function News() {
             {
                 data ? data.news.map(newsItem =>
                 <NewsItem
+                    key={newsItem.id}
                     title={newsItem.title}
                     category={newsItem.category}
                     subCategory={newsItem.subCategory}
