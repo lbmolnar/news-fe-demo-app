@@ -49,7 +49,9 @@ export default function News() {
         <>
             <h1>News list</h1>
             {
-                data ? data.news.map(newsItem =>
+                data ?
+                data.error ? <div>An API error occurred: {data.error}</div> :
+                data.news.map(newsItem =>
                 <NewsItem
                     key={newsItem.id}
                     title={newsItem.title}
